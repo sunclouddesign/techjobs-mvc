@@ -3,14 +3,17 @@ package org.launchcode.models;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+
+
 
 /**
  * Created by LaunchCode
@@ -122,6 +125,7 @@ public class JobData {
     /**
      * Read in data from a CSV file and store it in a list
      */
+
     private static void loadData() {
 
         // Only load data once
@@ -161,5 +165,4 @@ public class JobData {
             e.printStackTrace();
         }
     }
-
 }

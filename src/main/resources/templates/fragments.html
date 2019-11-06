@@ -27,5 +27,18 @@
         </div>
     </div>
 
+    <div th:fragment="displayjobs">
+        <div th:if="${jobs}">
+            <h3>Results:</h3>
+            <table class="job-listing" th:each="job, idx : ${jobs}" >
+                <tr th:each="item : ${job}" th:class="${idx.odd} ? 'odd'" >
+                    <td th:text="${item.key}"</td>
+                    <td th:text="${item.value}"</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
 </body>
 </html>
